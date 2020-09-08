@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/assets/js/index.js',
@@ -17,6 +18,11 @@ module.exports = {
       filename: 'index.html',
       template: './src/index.html',
     }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/assets/static', to: 'static' }
+      ],
+    }),
   ],
   module: {
     rules: [
@@ -26,10 +32,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
@@ -43,16 +46,16 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader',
-        ],
+        test: /\.pdf$/,
+        use: ['file-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: ['file-loader'],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          'file-loader',
-        ],
+        use: ['file-loader'],
       },
       {
         test: /\.js$/, //using regex to tell babel exactly what files to transcompile

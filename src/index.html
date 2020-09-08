@@ -1,13 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>perrosen.com</title>
+    <title>Identity by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
   </head>
-  <body>
-    <p>I work!!!</p>
-    <div class="container"></div>
-    <img src="./assets/images/avatar.jpg" alt="">
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <section id="main">
+        <header>
+          <span class="avatar"
+            ><img src="assets/images/profile.jpg" alt=""
+          /></span>
+          <h1>Per Rosén</h1>
+          <p>Senior Front-End Developer</p>
+        </header>
+
+        <footer>
+          <ul class="icons">
+            <li>
+              <a
+                href="https://github.com/perrosen"
+                target="_blank"
+                class="icon brands fa-github"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/rosenper/"
+                target="_blank"
+                class="icon brands fab fa-linkedin-in"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="static/Per_Rosen_-_Senior_Front_End_Developer.pdf"
+                target="_blank"
+                title="CV"
+                class="far fa-file"
+                >CV</a
+              >
+            </li>
+          </ul>
+        </footer>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="copyright">
+          <li>
+            &copy;
+            <a
+              href="mailto:per.rosen@gmail.com?subject=Contact from perrosen.com"
+              >Per Rosén</a
+            >
+          </li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      if ("addEventListener" in window) {
+        window.addEventListener("load", function () {
+          document.body.className = document.body.className.replace(
+            /\bis-preload\b/,
+            ""
+          );
+        });
+        document.body.className += navigator.userAgent.match(/(MSIE|rv:11\.0)/)
+          ? " is-ie"
+          : "";
+      }
+    </script>
   </body>
 </html>
